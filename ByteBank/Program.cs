@@ -21,3 +21,12 @@ Console.WriteLine($"Número da agencia {conta1.numero_agencia}");
 Console.WriteLine($"Saldo da conta {conta1.saldo}");
 
 Console.WriteLine("--------------------------------------------");
+
+if (conta1.Sacar(30) == true)
+{
+    Console.WriteLine($"Saldo atual da conta {conta1.saldo}");
+}
+else
+{
+    Console.WriteLine("Saldo insulficiente.");
+}

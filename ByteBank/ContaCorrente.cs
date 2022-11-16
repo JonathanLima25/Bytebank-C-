@@ -17,5 +17,16 @@ namespace ByteBank
         {
             this.saldo += valor;
         }
+
+        public bool Sacar(double valor)
+        {
+            if(this.saldo >= valor)
+            {    
+                this.saldo -= valor;
+                return true;
+            }
+            return false;
+            
+        }
     }
 }
