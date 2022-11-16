@@ -7,6 +7,12 @@ conta1.conta = "1010-X";
 conta1.numero_agencia = 15;
 conta1.saldo = 100;
 
+ContaCorrente conta2 = new ContaCorrente();
+conta2.titular = "Leonardo Silva";
+conta2.conta = "1111-A";
+conta2.numero_agencia = 14;
+conta2.saldo = 0;
+
 Console.WriteLine("Saldo de antes do deposito: R$"+conta1.saldo);
 
 conta1.Depositar(100);
@@ -30,3 +36,9 @@ else
 {
     Console.WriteLine("Saldo insulficiente.");
 }
+
+
+conta1.Transferir(100, conta2);
+
+Console.WriteLine($"Saldo da conta 1 {conta1.saldo}");
+Console.WriteLine($"Saldo da conta 2 {conta2.saldo}");
