@@ -39,15 +39,15 @@ using ByteBank.Titular;
 //Console.WriteLine($"Saldo da conta 2 {conta2.saldo}");
 
 Cliente cliente = new Cliente();
-cliente.nome = "Jonathan de Lima";
-cliente.cpf = "213-123";
-cliente.profissao = "Telemarketing";
+cliente.Nome = "Jonathan de Lima";
+cliente.Cpf = "213.123.122-12";
+cliente.Profissao = "Telemarketing";
 
 ContaCorrente conta= new ContaCorrente();
-conta.titular = cliente;
-conta.conta = "1015-X";
-conta.numero_agencia= 1;
+conta.Titular = cliente;
+conta.Conta = "1015-X";
+conta.Numero_agencia= 1;
 conta.Depositar(100);
 
-Console.WriteLine($"Titular da conta: {conta.titular.nome}");
+Console.WriteLine($"Titular da conta: {conta.Titular.Nome}");
 conta.ExibiConta();
