@@ -47,7 +47,7 @@ ContaCorrente conta= new ContaCorrente();
 conta.titular = cliente;
 conta.conta = "1015-X";
 conta.numero_agencia= 1;
-conta.saldo = 100;
+conta.Depositar(100);
 
 Console.WriteLine($"Titular da conta: {conta.titular.nome}");
 conta.ExibiConta();

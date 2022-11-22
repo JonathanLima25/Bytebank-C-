@@ -12,11 +12,16 @@ namespace ByteBank.Contas
         public int numero_agencia;
         public string conta;
         public Cliente titular;
-        public double saldo;
+        private double saldo;
 
-        public void Depositar(double valor)
+        public bool Depositar(double valor)
         {
+            if(valor<=0)
+            {
+                return false;
+            }
             saldo += valor;
+            return true;
         }
 
         public bool Sacar(double valor)
