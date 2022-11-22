@@ -1,5 +1,5 @@
-﻿
-using ByteBank;
+﻿using ByteBank.Contas;
+using ByteBank.Titular;
 
 //ContaCorrente conta1 = new ContaCorrente();
 //conta1.titular = "André Silva";
