@@ -10,7 +10,7 @@ namespace ByteBank
     {
         public int numero_agencia;
         public string conta;
-        public string titular;
+        public Cliente titular;
         public double saldo;
 
         public void Depositar(double valor)
@@ -38,6 +38,13 @@ namespace ByteBank
             {
                 return false;
             }
+        }
+
+        public void ExibiConta()
+        {
+            Console.WriteLine($"Titular: {this.titular.nome}");
+            Console.WriteLine($"Número da conta: {this.conta}, Número da agencia: {this.numero_agencia}");
+            Console.WriteLine($"Saldo da conta: {this.saldo}");
         }
     }
 }
