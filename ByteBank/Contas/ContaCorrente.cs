@@ -9,7 +9,7 @@ namespace ByteBank.Contas
 {
     public class ContaCorrente
     {
-        
+        public static int TotalDeContasCriadas { get; set; }
         public int Numero_agencia { get; set; }
         
         public string Conta { get; set; }
@@ -60,6 +60,7 @@ namespace ByteBank.Contas
             Numero_agencia = numero_agencia;
             Conta = conta;
             Titular = titular;
+            TotalDeContasCriadas++;
         }
     }
 }
