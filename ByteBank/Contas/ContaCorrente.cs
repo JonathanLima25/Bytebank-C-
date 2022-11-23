@@ -55,5 +55,11 @@ namespace ByteBank.Contas
             Console.WriteLine($"Número da conta: {Conta}, Número da agencia: {Numero_agencia}");
             Console.WriteLine($"Saldo da conta: {saldo}");
         }
+        public ContaCorrente(int numero_agencia, string conta, Cliente titular)
+        {
+            Numero_agencia = numero_agencia;
+            Conta = conta;
+            Titular = titular;
+        }
     }
 }

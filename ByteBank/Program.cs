@@ -43,10 +43,10 @@ cliente.Nome = "Jonathan de Lima";
 cliente.Cpf = "213.123.122-12";
 cliente.Profissao = "Telemarketing";
 
-ContaCorrente conta= new ContaCorrente();
-conta.Titular = cliente;
-conta.Conta = "1015-X";
-conta.Numero_agencia= 1;
+ContaCorrente conta= new ContaCorrente(1, "1015-X", cliente);
+//conta.Titular = cliente;
+//conta.Conta = "1015-X";
+//conta.Numero_agencia= 1;
 conta.Depositar(100);
 
 Console.WriteLine($"Titular da conta: {conta.Titular.Nome}");
