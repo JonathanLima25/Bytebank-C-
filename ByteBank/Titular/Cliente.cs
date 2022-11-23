@@ -10,12 +10,7 @@ namespace ByteBank.Titular
 {
     public class Cliente
     {
-        private string _nome;
-        public string Nome
-        {
-            get { return this._nome; }
-            set { this._nome = value; }
-        }
+        public string Nome { get; set; }
         private string _cpf;
         Match match;
         string pattern = @"^\d{3}\.\d{3}\.\d{3}-\d{2}$";
@@ -35,11 +30,6 @@ namespace ByteBank.Titular
                 }
             }
         }
-        private string _profissao;
-        public string Profissao
-        {
-            get { return this._profissao; }
-            set { this._profissao = value; }
-        }
+        public string Profissao { get; set; }
     }
 }
