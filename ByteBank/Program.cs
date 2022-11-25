@@ -1,4 +1,5 @@
 ﻿using ByteBank.Contas;
+using ByteBank.Funcionarios;
 using ByteBank.Titular;
 
 //ContaCorrente conta1 = new ContaCorrente();
@@ -38,16 +39,25 @@ using ByteBank.Titular;
 //Console.WriteLine($"Saldo da conta 1 {conta1.saldo}");
 //Console.WriteLine($"Saldo da conta 2 {conta2.saldo}");
 
-Cliente cliente = new Cliente();
-cliente.Nome = "Jonathan de Lima";
-cliente.Cpf = "213.123.122-12";
-cliente.Profissao = "Telemarketing";
+//Cliente cliente = new Cliente();
+//cliente.Nome = "Jonathan de Lima";
+//cliente.Cpf = "213.123.122-12";
+//cliente.Profissao = "Telemarketing";
 
-ContaCorrente conta= new ContaCorrente(1, "1015-X", cliente);
+//ContaCorrente conta= new ContaCorrente(1, "1015-X", cliente);
 //conta.Titular = cliente;
 //conta.Conta = "1015-X";
 //conta.Numero_agencia= 1;
-conta.Depositar(100);
+//conta.Depositar(100);
 
-Console.WriteLine($"Titular da conta: {conta.Titular.Nome}");
-conta.ExibiConta();
+//Console.WriteLine($"Titular da conta: {conta.Titular.Nome}");
+//conta.ExibiConta();
+
+Funcionario funcionario1= new Funcionario();
+funcionario1.Nome = "Jonathan de Lima";
+funcionario1.Cpf = "213.123.122-12";
+funcionario1.Salario = 10000;
+
+Console.WriteLine($"O funcionario {funcionario1.Nome}, tem o salario de {funcionario1.Salario} + bonificação de " +
+    $"{funcionario1.GetBonificacao()}.");
+
