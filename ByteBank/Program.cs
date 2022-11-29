@@ -1,6 +1,7 @@
 ﻿using ByteBank.Contas;
 using ByteBank.Funcionarios;
 using ByteBank.Titular;
+using ByteBank.Utilitario;
 
 //ContaCorrente conta1 = new ContaCorrente();
 //conta1.titular = "André Silva";
@@ -53,11 +54,26 @@ using ByteBank.Titular;
 //Console.WriteLine($"Titular da conta: {conta.Titular.Nome}");
 //conta.ExibiConta();
 
-Funcionario funcionario1= new Funcionario();
-funcionario1.Nome = "Jonathan de Lima";
-funcionario1.Cpf = "213.123.122-12";
-funcionario1.Salario = 10000;
+Funcionario jonathan = new Funcionario();
+jonathan.Nome = "Jonathan de Lima";
+jonathan.Cpf = "213.123.122-12";
+jonathan.Salario = 10000;
 
-Console.WriteLine($"O funcionario {funcionario1.Nome}, tem o salario de {funcionario1.Salario} + bonificação de " +
-    $"{funcionario1.GetBonificacao()}.");
+Console.WriteLine($"O funcionario {jonathan.Nome}, tem o salario de {jonathan.Salario} + bonificação de " +
+    $"{jonathan.GetBonificacao()}.");
+
+Diretor rachel = new Diretor();
+rachel.Nome = "Rachel Nóbrega";
+rachel.Cpf = "213.123.122-12";
+rachel.Salario = 10000;
+
+Console.WriteLine($"O funcionario {rachel.Nome}, tem o salario de {rachel.Salario} + bonificação de " +
+    $"{rachel.GetBonificacao()}.");
+
+GerenciadorDeBonificacao contador = new GerenciadorDeBonificacao();
+contador.Registrar(jonathan);
+contador.Registrar(rachel);
+
+Console.WriteLine($"Total de bonificações é de {contador.TotalDeBoneficacao}");
+
 
