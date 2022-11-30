@@ -10,30 +10,28 @@ namespace ByteBank.Funcionarios
     public class Funcionario
     {
         public string Nome { get; set; }
-
-        private string _cpf;
         Match match;
         string pattern = @"^\d{3}\.\d{3}\.\d{3}-\d{2}$";
-        public string Cpf
-        {
-            get { return this._cpf; }
-            set
-            {
-                match = Regex.Match(value, pattern);
-                if (match.Success)
-                {
-                    this._cpf = value;
-                }
-                else
-                {
-                    Console.WriteLine("CPF invalido");
-                }
-            }
-        }
+        public string Cpf { get; private set; }
         public double Salario { get; set; }
+        public static int TotalFuncionario { get; private set; }
         public virtual double GetBonificacao()
         {
             return this.Salario * 0.10;
+        }
+        public Funcionario(string cpf)
+        {
+            match = Regex.Match(cpf, pattern);
+            if (match.Success)
+            {
+                this.Cpf = cpf;
+            }
+            else
+            {
+                Console.WriteLine("CPF invalido");
+            }
+            TotalFuncionario++;
+            Console.WriteLine("Criando um funcionário.");
         }
     }
 }
