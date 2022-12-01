@@ -2,7 +2,9 @@
 using ByteBank.Funcionarios;
 using ByteBank.Titular;
 using ByteBank.Utilitario;
+using bytebank_ADM.Funcionarios;
 
+#region
 //ContaCorrente conta1 = new ContaCorrente();
 //conta1.titular = "André Silva";
 //conta1.conta = "1010-X";
@@ -53,35 +55,52 @@ using ByteBank.Utilitario;
 
 //Console.WriteLine($"Titular da conta: {conta.Titular.Nome}");
 //conta.ExibiConta();
-
-Funcionario jonathan = new Funcionario("213.123.122-12", 2000);
-jonathan.Nome = "Jonathan de Lima";
-
-
-
-Console.WriteLine($"O funcionario {jonathan.Nome}, tem o salario de {jonathan.Salario} + bonificação de " +
-    $"{jonathan.GetBonificacao()}.");
-
-Diretor rachel = new Diretor("213.123.122-12", 12000);
-rachel.Nome = "Rachel Nóbrega";
+//Funcionario jonathan = new Funcionario("213.123.122-12", 2000);
+//jonathan.Nome = "Jonathan de Lima";
 
 
 
-Console.WriteLine($"O funcionario {rachel.Nome}, tem o salario de {rachel.Salario} + bonificação de " +
-    $"{rachel.GetBonificacao()}.");
+//Console.WriteLine($"O funcionario {jonathan.Nome}, tem o salario de {jonathan.Salario} + bonificação de " +
+//    $"{jonathan.GetBonificacao()}.");
 
-GerenciadorDeBonificacao contador = new GerenciadorDeBonificacao();
-contador.Registrar(jonathan);
-contador.Registrar(rachel);
-
-Console.WriteLine($"Total de bonificações é de {contador.TotalDeBoneficacao}");
-Console.WriteLine("Total de Funcionarios: " + Funcionario.TotalFuncionario);
-
-jonathan.AumentarSalario();
-rachel.AumentarSalario();
+//Diretor rachel = new Diretor("213.123.122-12", 12000);
+//rachel.Nome = "Rachel Nóbrega";
 
 
-Console.WriteLine("Novo Salario do Jonathan: " + jonathan.Salario);
-Console.WriteLine("Novo Salario da Rachel: " + rachel.Salario);
+
+//Console.WriteLine($"O funcionario {rachel.Nome}, tem o salario de {rachel.Salario} + bonificação de " +
+//    $"{rachel.GetBonificacao()}.");
+
+//GerenciadorDeBonificacao contador = new GerenciadorDeBonificacao();
+//contador.Registrar(jonathan);
+//contador.Registrar(rachel);
+
+//Console.WriteLine($"Total de bonificações é de {contador.TotalDeBoneficacao}");
+//Console.WriteLine("Total de Funcionarios: " + Funcionario.TotalFuncionario);
+
+//jonathan.AumentarSalario();
+//rachel.AumentarSalario();
+
+//Console.WriteLine("Novo Salario do Jonathan: " + jonathan.Salario);
+//Console.WriteLine("Novo Salario da Rachel: " + rachel.Salario);
+#endregion
+GerenciadorDeBonificacao gerenciador = new GerenciadorDeBonificacao();
+
+Designer ulisses = new Designer("123456");
+ulisses.Nome = "Ulisses Souza";
+
+Diretor paula = new Diretor("987456");
+paula.Nome = "Paula Souza";
+
+Auxiliar igor = new Auxiliar("74581");
+igor.Nome = "Igor Dias";
+
+GerenteDeContas camila = new GerenteDeContas("852963");
+camila.Nome = "Camila Oliveira";
+
+gerenciador.Registrar(camila);
+gerenciador.Registrar(igor);
+gerenciador.Registrar(paula);
+gerenciador.Registrar(ulisses);
 
 
