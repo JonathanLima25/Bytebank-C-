@@ -33,5 +33,6 @@ namespace ByteBank.Funcionarios
         }
 
         public abstract void AumentarSalario();
+        
     }
 }

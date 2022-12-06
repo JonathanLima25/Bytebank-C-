@@ -1,5 +1,6 @@
 ﻿using ByteBank.Contas;
 using ByteBank.Funcionarios;
+using ByteBank.SistemaInterno;
 using ByteBank.Titular;
 using ByteBank.Utilitario;
 using bytebank_ADM.Funcionarios;
@@ -86,21 +87,28 @@ using bytebank_ADM.Funcionarios;
 #endregion
 GerenciadorDeBonificacao gerenciador = new GerenciadorDeBonificacao();
 
-Designer ulisses = new Designer("123456");
+Designer ulisses = new Designer("213.123.122-12");
 ulisses.Nome = "Ulisses Souza";
 
-Diretor paula = new Diretor("987456");
+Diretor paula = new Diretor("213.123.122-12");
 paula.Nome = "Paula Souza";
 
-Auxiliar igor = new Auxiliar("74581");
+Auxiliar igor = new Auxiliar("213.123.122-12");
 igor.Nome = "Igor Dias";
 
-GerenteDeContas camila = new GerenteDeContas("852963");
+GerenteDeContas camila = new GerenteDeContas("213.123.122-12");
 camila.Nome = "Camila Oliveira";
 
 gerenciador.Registrar(camila);
 gerenciador.Registrar(igor);
 gerenciador.Registrar(paula);
 gerenciador.Registrar(ulisses);
+
+paula.Senha ="123";
+
+SistemaInterno sistema = new SistemaInterno();
+
+sistema.Logar(paula, "123");
+
 
 
