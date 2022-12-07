@@ -1,5 +1,6 @@
 ﻿using ByteBank.Contas;
 using ByteBank.Funcionarios;
+using ByteBank.Parceria;
 using ByteBank.SistemaInterno;
 using ByteBank.Titular;
 using ByteBank.Utilitario;
@@ -107,8 +108,10 @@ gerenciador.Registrar(ulisses);
 paula.Senha ="123";
 
 SistemaInterno sistema = new SistemaInterno();
+ParceiroComercial caio = new ParceiroComercial();
+caio.Senha = "456";
 
 sistema.Logar(paula, "123");
-
+sistema.Logar(caio, "456");
 
 

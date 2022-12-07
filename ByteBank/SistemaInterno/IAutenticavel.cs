@@ -7,12 +7,8 @@ using System.Threading.Tasks;
 
 namespace ByteBank.SistemaInterno
 {
-    public abstract class Autenticavel : Funcionario
+    public interface IAutenticavel 
     {
-        public Autenticavel(string cpf, double salario) : base(cpf, salario)
-        {
-        }
-
         public string Senha { get; set; }
         public abstract bool Autenticar(string senha);
     }
